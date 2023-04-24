@@ -1,8 +1,8 @@
 import os
 
 from dotenv import load_dotenv
-from naff import Intents
-from naff.ext.debug_extension import DebugExtension
+from interactions import Intents
+from interactions.ext.debug_extension import DebugExtension
 
 from core.init_logging import init_logging
 from core.base import CustomClient
@@ -15,13 +15,14 @@ if __name__ == "__main__":
     load_dotenv()
 
     # initialise logging
-    init_logging()
+    logger = init_logging()
 
     # create our bot instance
     bot = CustomClient(
         intents=Intents.DEFAULT,  # intents are what events we want to receive from discord, `DEFAULT` is usually fine
         auto_defer=True,  # automatically deferring interactions
         activity="Anaffer bot",  # the status message of the bot
+        logger=logger, # use own logger
     )
 
     # load the debug extension if that is wanted

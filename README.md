@@ -1,6 +1,6 @@
 # Bot-Template
 
-A cookiecutter template for a discord bot with [NAFF](https://github.com/Discord-Snake-Pit/NAFF) made by [Kigstn](https://github.com/Kigstn)
+A cookiecutter template for a discord bot with [Interactions.py](https://github.com/interactions-py/interactions.py) made by [Kigstn](https://github.com/Kigstn)
 
 Made for users to get started making discord bot easier.
 

@@ -1,7 +1,7 @@
 from core.base import CustomClient
 
-from naff import listen, Extension
-from naff.api.events import ChannelCreate
+from interactions import listen, Extension
+from interactions.api.events import ChannelCreate
 
 
 class EventExtension(Extension):
@@ -15,6 +15,6 @@ class EventExtension(Extension):
 
 
 def setup(bot: CustomClient):
-    """Let naff load the extension"""
+    """Let interactions load the extension"""
 
     EventExtension(bot)

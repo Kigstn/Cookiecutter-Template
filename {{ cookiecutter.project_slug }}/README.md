@@ -1,8 +1,8 @@
 # {{cookiecutter.project_name}}
 
 
-A discord bot made with [NAFF](https://github.com/Discord-Snake-Pit/NAFF).
-Visit [the official guide](https://naff.readthedocs.io/Guides/01%20Getting%20Started/) to get started.
+A discord bot made with [Interactions.py](https://github.com/interactions-py/interactions.py).
+Visit [the official guide](https://interactions-py.github.io/interactions.py/Guides/01%20Getting%20Started/) to get started.
 
 # Running the Application
 There are multiple ways to launch the application.

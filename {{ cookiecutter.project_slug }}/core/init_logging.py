@@ -3,7 +3,7 @@ import os
 import time
 from typing import Optional
 
-from naff import logger_name
+from interactions import logger_name
 
 
 class CustomLogger:
@@ -15,7 +15,7 @@ class CustomLogger:
         )
         self.formatter.converter = time.gmtime
 
-    def make_logger(self, log_name: str):
+    def make_logger(self, log_name: str) -> logging.Logger:
         logger = logging.getLogger(log_name)
         logger.setLevel(logging.DEBUG)
 
@@ -36,6 +36,8 @@ class CustomLogger:
         logger.addHandler(console_handler)
         logger.addHandler(file_handler)
 
+        return logger
+
 
 class MakeFileHandler(logging.FileHandler):
     """Subclass of logging.FileHandler which makes sure the folder is created"""
@@ -52,9 +54,9 @@ class MakeFileHandler(logging.FileHandler):
         logging.FileHandler.__init__(self, filename, mode, encoding, delay)
 
 
-def init_logging():
+def init_logging() -> logging.Logger:
     # Initialize formatter
     logger = CustomLogger()
 
     # Initialize logging for exceptions
-    logger.make_logger(logger_name)
+    return logger.make_logger(logger_name)
